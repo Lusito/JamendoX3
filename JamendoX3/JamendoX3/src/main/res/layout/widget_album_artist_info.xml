@@ -1,0 +1,87 @@
+<!--
+  ~ Copyright (c) 2014 Santo Pfingsten
+  ~
+  ~ This software is provided 'as-is', without any express or implied warranty.
+  ~ In no event will the authors be held liable for any damages arising from the use of this software.
+  ~
+  ~ Permission is granted to anyone to use this software for any purpose, including commercial
+  ~ applications, and to alter it and redistribute it freely, subject to the following restrictions:
+  ~
+  ~ 1. The origin of this software must not be misrepresented; you must not claim that you wrote the
+  ~    original software. If you use this software in a product, an acknowledgment in the product
+  ~    documentation would be appreciated but is not required.
+  ~
+  ~ 2. Altered source versions must be plainly marked as such, and must not be misrepresented as being
+  ~    the original software.
+  ~
+  ~ 3. This notice may not be removed or altered from any source distribution.
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:jamendo="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+    <RelativeLayout
+        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:layout_weight="2"
+        android:background="@drawable/list_background_right"
+        android:padding="5dip">
+
+        <info.lusito.jamendo.android.widgets.RemoteImageView
+            android:id="@+id/remoteImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_weight="4"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_margin="5dip">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Some Weird Band"/>
+
+            <TextView
+                android:id="@+id/tagList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf = "@+id/title"
+                android:layout_centerInParent="true"
+                android:paddingLeft="6dip"
+                android:text="[hello, world, foo, bar]"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <WebView
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/actionButtons"/>
+
+            <info.lusito.jamendo.android.widgets.ActionButtonList
+                android:id="@+id/actionButtons"
+                android:layout_width="@dimen/action_button_size"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                jamendo:actions="favorite,website,artist"/>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

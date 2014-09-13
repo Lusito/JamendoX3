@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2014 Santo Pfingsten
+  ~
+  ~ This software is provided 'as-is', without any express or implied warranty.
+  ~ In no event will the authors be held liable for any damages arising from the use of this software.
+  ~
+  ~ Permission is granted to anyone to use this software for any purpose, including commercial
+  ~ applications, and to alter it and redistribute it freely, subject to the following restrictions:
+  ~
+  ~ 1. The origin of this software must not be misrepresented; you must not claim that you wrote the
+  ~    original software. If you use this software in a product, an acknowledgment in the product
+  ~    documentation would be appreciated but is not required.
+  ~
+  ~ 2. Altered source versions must be plainly marked as such, and must not be misrepresented as being
+  ~    the original software.
+  ~
+  ~ 3. This notice may not be removed or altered from any source distribution.
+  -->
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="info.lusito.jamendo.android"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="16" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:name="info.lusito.jamendo.android.JamendoApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:logo="@drawable/actionbar_logo"
+        android:theme="@style/Theme.Jamendo" >
+        <activity
+            android:name="info.lusito.jamendo.android.activities.MainActivity"
+            android:label="@string/app_name"
+            android:logo="@drawable/actionbar_logo"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <service
+            android:name=".player.MusicPlayerService"
+            android:label="MusicPlayerService" >
+        </service>
+    </application>
+
+</manifest>

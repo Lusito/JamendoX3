@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2014 Santo Pfingsten
+  ~
+  ~ This software is provided 'as-is', without any express or implied warranty.
+  ~ In no event will the authors be held liable for any damages arising from the use of this software.
+  ~
+  ~ Permission is granted to anyone to use this software for any purpose, including commercial
+  ~ applications, and to alter it and redistribute it freely, subject to the following restrictions:
+  ~
+  ~ 1. The origin of this software must not be misrepresented; you must not claim that you wrote the
+  ~    original software. If you use this software in a product, an acknowledgment in the product
+  ~    documentation would be appreciated but is not required.
+  ~
+  ~ 2. Altered source versions must be plainly marked as such, and must not be misrepresented as being
+  ~    the original software.
+  ~
+  ~ 3. This notice may not be removed or altered from any source distribution.
+  -->
+
+<resources>
+
+    <style name="Theme.Jamendo" parent="@android:style/Theme.Holo.Light.DarkActionBar">
+        <item name="android:actionBarItemBackground">@drawable/selectable_background_jamendo</item>
+        <item name="android:popupMenuStyle">@style/PopupMenu.Jamendo</item>
+        <item name="android:dropDownListViewStyle">@style/DropDownListView.Jamendo</item>
+        <item name="android:actionBarTabStyle">@style/ActionBarTabStyle.Jamendo</item>
+        <item name="android:actionDropDownStyle">@style/DropDownNav.Jamendo</item>
+        <item name="android:actionBarStyle">@style/ActionBar.Solid.Jamendo</item>
+        <item name="android:actionModeBackground">@drawable/cab_background_top_jamendo</item>
+        <item name="android:actionModeSplitBackground">@drawable/cab_background_bottom_jamendo</item>
+        <item name="android:actionModeCloseButtonStyle">@style/ActionButton.CloseMode.Jamendo</item>
+        
+                <!-- Light.DarkActionBar specific -->
+        <item name="android:actionBarWidgetTheme">@style/Theme.Jamendo.Widget</item>
+
+    </style>
+
+    <style name="ActionBar.Solid.Jamendo" parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">@drawable/actionbar</item>
+        <item name="android:backgroundStacked">@drawable/actionbar</item>
+        <item name="android:backgroundSplit">@drawable/actionbar</item>
+        <item name="android:progressBarStyle">@style/ProgressBar.Jamendo</item>
+    </style>
+
+    <style name="ActionBar.Transparent.Jamendo" parent="@android:style/Widget.Holo.ActionBar">
+        <item name="android:background">@drawable/ab_transparent_jamendo</item>
+        <item name="android:progressBarStyle">@style/ProgressBar.Jamendo</item>
+    </style>
+
+    <style name="PopupMenu.Jamendo" parent="@android:style/Widget.Holo.ListPopupWindow">
+        <item name="android:popupBackground">@drawable/menu_dropdown_panel_jamendo</item>	
+    </style>
+
+    <style name="DropDownListView.Jamendo" parent="@android:style/Widget.Holo.ListView.DropDown">
+        <item name="android:listSelector">@drawable/selectable_background_jamendo</item>
+    </style>
+
+    <style name="ActionBarTabStyle.Jamendo" parent="@android:style/Widget.Holo.ActionBar.TabView">
+        <item name="android:background">@drawable/tab_indicator_ab_jamendo</item>
+    </style>
+
+    <style name="DropDownNav.Jamendo" parent="@android:style/Widget.Holo.Spinner">
+        <item name="android:background">@drawable/spinner_background_ab_jamendo</item>
+        <item name="android:popupBackground">@drawable/menu_dropdown_panel_jamendo</item>
+        <item name="android:dropDownSelector">@drawable/selectable_background_jamendo</item>
+    </style>
+    
+    <style name="ProgressBar.Jamendo" parent="@android:style/Widget.Holo.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/progress_horizontal_jamendo</item>
+    </style>
+    
+    <style name="ActionButton.CloseMode.Jamendo" parent="@android:style/Widget.Holo.ActionButton.CloseMode">
+        <item name="android:background">@drawable/btn_cab_done_jamendo</item>
+    </style>
+
+    <!-- this style is only referenced in a Light.DarkActionBar based theme -->
+    <style name="Theme.Jamendo.Widget" parent="@android:style/Theme.Holo">
+        <item name="android:popupMenuStyle">@style/PopupMenu.Jamendo</item>
+        <item name="android:dropDownListViewStyle">@style/DropDownListView.Jamendo</item>
+    </style>
+
+</resources>

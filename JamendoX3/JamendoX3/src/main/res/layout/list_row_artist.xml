@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2014 Santo Pfingsten
+  ~
+  ~ This software is provided 'as-is', without any express or implied warranty.
+  ~ In no event will the authors be held liable for any damages arising from the use of this software.
+  ~
+  ~ Permission is granted to anyone to use this software for any purpose, including commercial
+  ~ applications, and to alter it and redistribute it freely, subject to the following restrictions:
+  ~
+  ~ 1. The origin of this software must not be misrepresented; you must not claim that you wrote the
+  ~    original software. If you use this software in a product, an acknowledgment in the product
+  ~    documentation would be appreciated but is not required.
+  ~
+  ~ 2. Altered source versions must be plainly marked as such, and must not be misrepresented as being
+  ~    the original software.
+  ~
+  ~ 3. This notice may not be removed or altered from any source distribution.
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingLeft="5dip"
+    android:paddingRight="5dip"
+    android:paddingTop="3dip"
+    android:paddingBottom="3dip" >
+
+    <!--  ListRow Left side Thumbnail image -->
+    <info.lusito.jamendo.android.widgets.RemoteImageView
+        android:id="@+id/remoteImage"
+        android:layout_width="40dip"
+        android:layout_height="40dip"
+        android:layout_marginRight="5dip"/>
+
+    <!-- Artist Name-->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/remoteImage"
+        android:layout_toRightOf="@+id/remoteImage"
+        android:layout_toLeftOf="@+id/addButton"
+        android:text="Some Title"
+        android:textColor="#040404"
+        android:typeface="sans"
+        android:textSize="15dip"
+        android:textStyle="bold"/>
+
+    <!-- Tags -->
+    <TextView
+        android:id="@+id/tagList"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:textColor="#343434"
+        android:textSize="12dip"
+        android:layout_marginTop="1dip"
+        android:layout_toRightOf="@+id/remoteImage"
+        android:layout_toLeftOf="@+id/addButton"
+        android:text="2005-12-16" />
+
+    <Button
+        android:id="@+id/addButton"
+        android:layout_width="40dip"
+        android:layout_height="40dip"
+        style="?android:attr/buttonStyleSmall"
+        android:text="+"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:focusable="false"/>
+</RelativeLayout>

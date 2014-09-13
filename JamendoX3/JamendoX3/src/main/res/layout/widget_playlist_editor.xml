@@ -1,0 +1,85 @@
+<!--
+  ~ Copyright (c) 2014 Santo Pfingsten
+  ~
+  ~ This software is provided 'as-is', without any express or implied warranty.
+  ~ In no event will the authors be held liable for any damages arising from the use of this software.
+  ~
+  ~ Permission is granted to anyone to use this software for any purpose, including commercial
+  ~ applications, and to alter it and redistribute it freely, subject to the following restrictions:
+  ~
+  ~ 1. The origin of this software must not be misrepresented; you must not claim that you wrote the
+  ~    original software. If you use this software in a product, an acknowledgment in the product
+  ~    documentation would be appreciated but is not required.
+  ~
+  ~ 2. Altered source versions must be plainly marked as such, and must not be misrepresented as being
+  ~    the original software.
+  ~
+  ~ 3. This notice may not be removed or altered from any source distribution.
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="38dip"
+        android:orientation="horizontal"
+        android:paddingTop="2dip"
+        android:paddingBottom="2dip"
+        android:paddingLeft="5dip"
+        android:paddingRight="2dip">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Playlist:"
+            android:gravity="center_vertical" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <ImageButton
+                android:id="@+id/prevButton"
+                android:layout_width="35dip"
+                android:layout_height="35dip"
+                android:src="@drawable/ic_media_previous"/>
+            <ImageButton
+                android:id="@+id/playButton"
+                android:layout_width="35dip"
+                android:layout_height="35dip"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:src="@drawable/ic_media_play"/>
+            <ImageButton
+                android:id="@+id/nextButton"
+                android:layout_width="35dip"
+                android:layout_height="35dip"
+                android:src="@drawable/ic_media_next"/>
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/listActions"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:visibility="gone"
+            android:src="@android:drawable/ic_menu_more"/>
+
+    </LinearLayout>
+
+    <info.lusito.jamendo.android.widgets.dragdrop.DragDropListView
+        android:id="@+id/playlist"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/list_background_top_left"
+        android:divider="@null"
+        android:dividerHeight="0dip"
+        android:layout_marginLeft="5dip"/>
+
+</LinearLayout>

@@ -1,0 +1,97 @@
+<!--
+  ~ Copyright (c) 2014 Santo Pfingsten
+  ~
+  ~ This software is provided 'as-is', without any express or implied warranty.
+  ~ In no event will the authors be held liable for any damages arising from the use of this software.
+  ~
+  ~ Permission is granted to anyone to use this software for any purpose, including commercial
+  ~ applications, and to alter it and redistribute it freely, subject to the following restrictions:
+  ~
+  ~ 1. The origin of this software must not be misrepresented; you must not claim that you wrote the
+  ~    original software. If you use this software in a product, an acknowledgment in the product
+  ~    documentation would be appreciated but is not required.
+  ~
+  ~ 2. Altered source versions must be plainly marked as such, and must not be misrepresented as being
+  ~    the original software.
+  ~
+  ~ 3. This notice may not be removed or altered from any source distribution.
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:jamendo="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_toLeftOf="@+id/actionButtons" >
+
+        <TextView
+            android:id="@+id/trackName"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="Mister Blister"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/radioArtistAlbum"
+            android:layout_below="@+id/trackName"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Smiley (On The Rock!)"
+            android:gravity="center_horizontal"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+        <info.lusito.jamendo.android.widgets.RemoteImageView
+            android:id="@+id/radioImage"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_above="@+id/radioNameTime"
+            android:layout_below="@+id/radioArtistAlbum"
+            android:layout_margin="5dip"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:id="@+id/radioNameTime"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_alignParentBottom="true">
+
+            <TextView
+                android:id="@+id/radioName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Foo Radio"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" - "
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/radioTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1:23"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textStyle="bold"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <info.lusito.jamendo.android.widgets.ActionButtonList
+        android:id="@+id/actionButtons"
+        android:layout_width="@dimen/action_button_size"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        jamendo:actions="track,artist,album,favorite,like,dislike,download,buy"/>
+</RelativeLayout>
